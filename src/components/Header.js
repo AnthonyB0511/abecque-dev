@@ -1,6 +1,7 @@
 import styles from "./Header.module.scss";
 import logo from '../assets/img/logo3.png';
 import { NavLink, Link } from "react-router-dom";
+import HeaderMobile from "./HeaderMobile";
 const Header = () => {
     return (
         <>
@@ -11,6 +12,7 @@ const Header = () => {
                     </Link>
 
                 </div>
+                <HeaderMobile />
                 <nav>
                     <ul className={`${styles.headerNav} d-flex`}>
                         <li className="mx20">
@@ -25,9 +27,23 @@ const Header = () => {
                 </nav>
                 <nav>
                     <ul className={`${styles.headerContact} d-flex`}>
-                        <li className="mx20"><i className="fa-brands fa-linkedin i"></i></li>
-                        <li className="mx20"><i className="fa-solid fa-envelope"></i></li>
-                        <li className="mx20"><i className="fa-brands fa-github"></i></li>
+                        <li className="mx20">
+                            <Link target="_blank" to="https://www.linkedin.com/in/abecque/">
+                                <i className="fa-brands fa-linkedin i"></i>
+                            </Link>
+                        </li>
+
+                        <li className="mx20">
+                            <Link to="mailto:becque.anthony@gmail.com">
+                                <i className="fa-solid fa-envelope"></i>
+                            </Link>
+                        </li>
+
+                        <li className="mx20">
+                            <Link target="_blank" to="https://github.com/AnthonyB0511">
+                                <i className="fa-brands fa-github"></i>
+                            </Link>
+                        </li>
                     </ul>
                 </nav>
             </section>

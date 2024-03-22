@@ -9,11 +9,32 @@
         font-size: 18px;
     }
 
+    .mentions {
+        font-size: 12px;
+        cursor: pointer;
+        font-style: italic;
+        font-weight: 100;
+    }
+
     nav {
         margin-top: 8px;
 
         ul {
             li {
+                a {
+                    position: relative;
+                    color: var(--text-color);
+                    cursor: pointer;
+                    font-weight: 500;
+                    transition: .3s all;
+                    font-size: 22px;
+
+                    &:hover {
+                        color: var(--accent-color);
+                    }
+                }
+
+
                 i {
                     font-size: 25px;
                 }
