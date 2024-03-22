@@ -1,23 +1,19 @@
+import { Outlet } from "react-router-dom";
 import Header from "./components/Header";
-import Presentation from "./components/Presentation";
+import Footer from "./components/Footer";
+import styles from "./App.module.scss";
+import { Suspense } from "react";
 function App() {
   return (
-    <>
-      <ul class="background">
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-      </ul>
+    <body className={`${styles.app}`}>
       <Header />
-      <Presentation />
-    </>
+      <Suspense>
+        <main className={`${styles.containerApp}`}>
+          <Outlet />
+        </main>
+      </Suspense>
+      <Footer />
+    </body>
   );
 }
 

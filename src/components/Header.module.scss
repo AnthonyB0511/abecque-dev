@@ -15,12 +15,14 @@
     }
 
     .headerNav {
-        li {
+
+        a {
             position: relative;
             color: var(--text-color);
             cursor: pointer;
             font-weight: 500;
             transition: .3s all;
+            font-size: 22px;
 
             &::after {
                 content: "";
@@ -42,9 +44,15 @@
                 }
             }
         }
+
+        .active {
+            color: var(--accent-color) !important;
+
+            &::after {
+                width: 50% !important;
+            }
+        }
     }
-
-
 
 
 
