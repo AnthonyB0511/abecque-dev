@@ -2,6 +2,7 @@ import Lottie from "react-lottie";
 import Animation from "../assets/Animation.json";
 import Title from "../components/Title";
 import Card from "../components/Card";
+import styles from './Presentation.module.scss';
 
 const Presentation = () => {
     const defaultOptions = {
@@ -14,15 +15,15 @@ const Presentation = () => {
     };
 
     return (
-        <section className="d-flex align-items-center justify-content-evenly">
+        <section className={`${styles.container}d-flex align-items-center justify-content-evenly my30`}>
 
             <article>
                 <Title title="Bienvenue" />
                 <Card />
             </article>
-            {/* <article>
+            <article className={styles.article}>
                 <Lottie options={defaultOptions} height={600} width={400} />
-            </article> */}
+            </article>
         </section>
 
     );

@@ -5,8 +5,9 @@
     width: 40px;
     height: 30px;
     cursor: pointer;
-    background-color: var(--primary);
+    background-color: transparent;
     display: none;
+    z-index: 3;
 
     @media screen and (max-width: 768px) {
         display: block;
