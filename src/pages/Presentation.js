@@ -1,6 +1,7 @@
 import Lottie from "react-lottie";
 import Animation from "../assets/Animation.json";
 import Title from "../components/Title";
+import Card from "../components/Card";
 
 const Presentation = () => {
     const defaultOptions = {
@@ -17,12 +18,11 @@ const Presentation = () => {
 
             <article>
                 <Title title="Bienvenue" />
-                <div>
-                    Je conçois des applications web engageantes. Si vous avez une idée il est temps de les mettre en oeuvre</div>
+                <Card />
             </article>
-            <article>
+            {/* <article>
                 <Lottie options={defaultOptions} height={600} width={400} />
-            </article>
+            </article> */}
         </section>
 
     );
