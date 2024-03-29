@@ -1,0 +1,58 @@
+.contact {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+
+    input,
+    textarea {
+        width: 75%;
+        margin: 1.5vh auto;
+        border-radius: 10px;
+        padding: 1%;
+        font-family: var(--font-family);
+        font-style: italic;
+        font-size: 18px;
+    }
+
+    button {
+        cursor: pointer;
+        background-color: var(--accent-color);
+        padding: 1rem;
+        color: var(--primary);
+        font-family: var(--font-family);
+        border: 2px solid var(--primary);
+        border-radius: 15px;
+        transition: .3s all;
+        font-size: 18px;
+        margin: 25px auto 35px auto;
+        font-weight: 600;
+
+        &:hover {
+            background-color: var(--primary);
+            color: var(--accent-color);
+            transform: scale(1.1);
+            border: 2px solid var(--accent-color);
+        }
+    }
+
+    .rules {
+        width: 75%;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        p {
+            font-size: 01rem;
+            font-weight: 200;
+        }
+
+        input {
+            margin: 0;
+            width: 15%
+        }
+
+        ;
+    }
+
+}

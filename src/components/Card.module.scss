@@ -40,11 +40,13 @@
                 cursor: pointer;
                 background-color: var(--accent-color);
                 padding: 1rem;
-                color: var(--text-color);
+                color: var(--primary);
                 font-family: var(--font-family);
                 border: 2px solid var(--primary);
                 border-radius: 15px;
                 transition: .3s all;
+                font-weight: 600;
+                font-size: 18px;
 
                 &:hover {
                     background-color: var(--primary);
