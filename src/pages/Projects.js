@@ -1,7 +1,7 @@
 import Title from "../components/Title";
 import ProjectCard from "../components/ProjectCard";
 import styles from "./Projects.module.scss";
-import gommes from "../assets/img/des-gommes.webp";
+import gommes from "../assets/img/gommes_1.webp";
 import atwi from "../assets/video/atwi.mp4";
 
 const Projects = () => {
