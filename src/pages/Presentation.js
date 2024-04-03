@@ -21,9 +21,9 @@ const Presentation = () => {
                 <Title title="Bienvenue" />
                 <Card />
             </article>
-            <article className={styles.article}>
+            {/* <article className={styles.article}>
                 <Lottie options={defaultOptions} height={600} width={400} />
-            </article>
+            </article> */}
         </section>
 
     );

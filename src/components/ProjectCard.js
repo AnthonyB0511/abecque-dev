@@ -12,12 +12,15 @@ const ProjectCard = ({ photo, video, title, stack, link, git, description }) => 
             onHoverEnd={() => setIsHovered(false)}
             transition={{ type: "spring", stiffness: 300, damping: 20 }}
             className={styles.container}>
-            {photo != null && <img src={photo} />}
-            {video != null &&
-                <video id="video" autoPlay loop muted controls>
-                    <source src={video} type="video/mp4" />
-                </video>}
-            <p>{title}</p>
+            <div>
+                {photo != null && <img src={photo} />}
+                {video != null &&
+                    <video id="video" autoPlay loop muted controls>
+                        <source src={video} type="video/mp4" />
+                    </video>}
+                <p>{title}</p>
+            </div>
+
             <motion.div
                 className={styles.hidden}
                 initial={{ opacity: 0 }}
@@ -26,7 +29,7 @@ const ProjectCard = ({ photo, video, title, stack, link, git, description }) => 
                 <article>
                     <p className={styles.description}>{description}</p>
                     <div className="line"></div>
-                    <p className={styles.description}>Technologies utilisées</p>
+                    {/* <p className={styles.description}>Technologies utilisées</p> */}
                     <ul className={styles.stack}>
                         {stack.map((oneStack, index) => (
                             <li key={index}>{oneStack}</li>
@@ -36,8 +39,8 @@ const ProjectCard = ({ photo, video, title, stack, link, git, description }) => 
 
                 <motion.div
                     className={styles.link}
-                    initial={{ opacity: 0, y: -10 }}
-                    animate={{ opacity: isHovered ? 1 : 0, y: isHovered ? 80 : 0 }}
+                    initial={{ opacity: 0, x: -10 }}
+                    animate={{ opacity: isHovered ? 1 : 0, x: isHovered ? 100 : 0 }}
                     transition={{ duration: 0.5 }}>
                     <section>
                         <Link target="_blank" to={git}>

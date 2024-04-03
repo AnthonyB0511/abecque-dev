@@ -1,5 +1,5 @@
 .portrait {
-    width: 40%;
+    width: clamp(35%, 40%, 95%);
     margin: 3% auto;
     display: flex;
     justify-content: center;
@@ -11,8 +11,24 @@
     box-shadow: var(--box-shadow);
     transition: all .3s;
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 1300px) {
+        width: 60%;
+    }
+
+    @media screen and (max-width: 968px) {
         width: 75%;
+    }
+
+    @media screen and (max-width: 768px) {
+        width: 85%;
+    }
+
+    @media screen and (max-width: 480px) {
+        width: 89%;
+    }
+
+    @media screen and (max-width: 380px) {
+        width: 87%;
     }
 
     .headerTitle {
@@ -52,6 +68,12 @@
                     background-color: var(--primary);
                     color: var(--accent-color);
                     transform: scale(1.1);
+                    border: 2px solid var(--accent-color);
+                }
+
+                @media screen and (max-width: 480px) {
+                    padding: 0.5rem;
+                    font-size: 15px;
                 }
             }
         }
@@ -71,10 +93,24 @@
         align-items: center;
         justify-content: space-evenly;
 
+        h1 {
+            @media screen and (max-width: 768px) {
+                font-size: 23px;
+            }
+
+            @media screen and (max-width: 480px) {
+                font-size: 20px;
+            }
+        }
+
         .subtitle {
             font-weight: 300;
             font-style: italic;
             font-size: 1rem;
+
+            @media screen and (max-width: 768px) {
+                font-size: 0.9rem;
+            }
         }
     }
 
@@ -84,6 +120,11 @@
         margin: 0 auto;
         font-style: italic;
         font-weight: 200;
+
+        @media screen and (max-width: 480px) {
+            width: 90%;
+        }
+
     }
 
     .skills {
@@ -93,8 +134,16 @@
         width: 100%;
         padding: 5%;
 
+        @media screen and (max-width: 768px) {
+            flex-wrap: wrap;
+        }
+
         .type {
             width: 40%;
+
+            @media screen and (max-width: 768px) {
+                width: 75%;
+            }
 
             .typeTitle {
                 text-align: center;

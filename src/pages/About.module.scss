@@ -1,6 +1,6 @@
 .sectionAbout {
     margin-block: 30px;
-    width: 50%;
+    width: clamp(40%, 50%, 90%);
     margin: 0 auto;
 
     p {
