@@ -10,6 +10,8 @@ const ProjectCard = ({ photo, video, title, stack, link, git, description }) => 
             whileTap={{ scale: 0.9 }}
             onHoverStart={() => setIsHovered(true)}
             onHoverEnd={() => setIsHovered(false)}
+            onTouchStart={() => setIsHovered(true)}
+            onTouchEnd={() => setIsHovered(false)}
             transition={{ type: "spring", stiffness: 300, damping: 20 }}
             className={styles.container}>
             <div>
