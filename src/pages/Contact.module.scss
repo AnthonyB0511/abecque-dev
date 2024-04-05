@@ -36,6 +36,10 @@
         font-size: 18px;
     }
 
+    textarea {
+        height: 20vh;
+    }
+
     button {
         cursor: pointer;
         background-color: var(--accent-color);
@@ -67,6 +71,15 @@
         p {
             font-size: 01rem;
             font-weight: 200;
+            text-align: justify;
+
+            @media screen and (max-width: 580px) {
+                font-size: 0.8rem;
+            }
+
+            @media screen and (max-width: 480px) {
+                font-size: 0.7rem;
+            }
         }
 
         input {
