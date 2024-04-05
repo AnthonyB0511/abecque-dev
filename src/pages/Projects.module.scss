@@ -8,5 +8,10 @@
 
     @media screen and (max-width: 769px) {
         flex-direction: column;
+        width: 85%;
+    }
+
+    @media screen and (max-width: 480px) {
+        width: 90%;
     }
 }
