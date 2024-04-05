@@ -57,11 +57,16 @@
             border-radius: 15px;
 
             @media screen and (max-width: 769px) {
-                width: 50%;
+                width: 40%;
+
             }
 
             @media screen and (max-width: 480px) {
-                width: 55%;
+                width: 50%;
+            }
+
+            @media screen and (max-width: 380px) {
+                width: 65%;
             }
         }
     }
