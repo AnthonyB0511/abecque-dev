@@ -1,11 +1,18 @@
 .container {
     cursor: pointer;
-    box-shadow: var(--box-shadow);
     padding: 15px;
     border-radius: 20px;
     margin-block: 2vh;
-    width: clamp(30%, 35%, 75%);
-    position: relative;
+    width: clamp(35%, 45%, 75%);
+    height: clamp(25vh, 42vh, 50vh);
+    // position: relative;
+    transform-style: preserve-3d;
+    // overflow: hidden; // Assure que les éléments retournés ne débordent pas
+    box-shadow: var(--box-shadow);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 
     @media screen and (max-width: 769px) {
         width: 70%;
@@ -16,161 +23,174 @@
     }
 
 
-    img {
-        width: 100%;
-    }
-
-    video {
-        width: 50%;
-        display: block;
-        margin: 0 auto;
-        border-radius: 15px;
-    }
-
-    p {
-        text-align: center;
-        font-size: 25px;
-        font-weight: 500;
-        margin-top: 15px;
-    }
-
-    .hidden {
-        position: absolute;
-        top: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        left: 0;
+    .cardFront,
+    .cardBack {
         width: 100%;
         height: 100%;
+        backface-visibility: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        // //     text-align: center;
+    }
+
+    .cardFront {
+        img {
+            width: 100%;
+            border-radius: 15px;
+        }
+
+        video {
+            width: 40%;
+            display: block;
+            margin: 0 auto;
+            border-radius: 15px;
+        }
+    }
+
+
+    .cardBack {
+        // width: 100%;
+        // height: 100%;
+        // display: flex;
+        // justify-content: center;
+        // align-items: center;
+        // flex-direction: column;
         background-color: var(--primary);
         transition: all .3s ease;
         border-radius: 20px;
+        transform: rotatey(180deg);
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
         @media screen and (max-width: 769px) {
             padding: 10px;
         }
 
+        .description {
+            font-size: 22px;
+            width: 80%;
+            margin: 15px auto;
 
+            @media screen and (max-width: 768px) {
+                font-size: 16px;
+            }
+        }
 
-        article {
-            .description {
-                font-size: 22px;
-                width: 80%;
-                margin: 15px auto;
+        .stack {
+            display: flex;
+            margin-top: 10px;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+
+            li {
+                font-weight: 300;
+                font-style: italic;
+                margin-right: 5px;
 
                 @media screen and (max-width: 768px) {
-                    font-size: 16px;
-                }
-            }
-
-            .stack {
-                display: flex;
-                margin-top: 10px;
-                justify-content: space-evenly;
-                flex-wrap: wrap;
-
-                li {
-                    font-weight: 300;
-                    font-style: italic;
-
-                    @media screen and (max-width: 768px) {
-                        font-size: 14px;
-                    }
+                    font-size: 14px;
                 }
             }
         }
 
 
-        a {
-            border-radius: 10px;
-            cursor: pointer;
 
-            button {
-                cursor: pointer;
-                background-color: var(--accent-color);
-                padding: 1rem;
-                color: var(--primary);
-                font-family: var(--font-family);
-                border: 2px solid var(--primary);
-                border-radius: 15px;
-                transition: .3s all;
-                font-weight: 600;
-                font-size: 18px;
+        // a {
+        //     border-radius: 10px;
+        //     cursor: pointer;
 
-                &:hover {
-                    background-color: var(--primary);
-                    color: var(--accent-color);
-                    transform: scale(1.05);
-                    border: 2px solid var(--accent-color);
-                }
+        //     button {
+        //         cursor: pointer;
+        //         background-color: var(--accent-color);
+        //         padding: 0.8rem;
+        //         color: var(--primary);
+        //         font-family: var(--font-family);
+        //         border: 2px solid var(--primary);
+        //         border-radius: 15px;
+        //         transition: .3s all;
+        //         font-weight: 600;
+        //         font-size: 18px;
 
-                @media screen and (max-width: 480px) {
-                    border-radius: 10px;
-                }
-            }
+        //         &:hover {
+        //             background-color: var(--primary);
+        //             color: var(--accent-color);
+        //             transform: scale(1.05);
+        //             border: 2px solid var(--accent-color);
+        //         }
 
-            i {
-                margin-right: 10px;
-                font-size: 22px;
-            }
-        }
+        //         @media screen and (max-width: 480px) {
+        //             border-radius: 10px;
+        //         }
+        //     }
 
-        .link {
-            position: absolute;
-            right: -8%;
+        //     i {
+        //         margin-right: 10px;
+        //         font-size: 22px;
+        //     }
+        // }
+
+        .links {
             display: flex;
-            flex-direction: column;
+            margin-top: 10px;
             justify-content: center;
             align-items: center;
 
-            @media screen and (max-width: 769px) {
-                right: -8%;
-            }
 
-            @media screen and (max-width: 480px) {
-                right: 15%;
-            }
+            a {
+                border-radius: 10px;
+                cursor: pointer;
+                margin-right: 5px;
 
-            @media screen and (max-width: 420px) {
-                right: 21%;
-            }
+                button {
+                    cursor: pointer;
+                    background-color: var(--accent-color);
+                    padding: 0.8rem;
+                    color: var(--primary);
+                    font-family: var(--font-family);
+                    border: 2px solid var(--primary);
+                    border-radius: 15px;
+                    transition: .3s all;
+                    font-weight: 600;
+                    font-size: 18px;
 
-            @media screen and (max-width: 380px) {
-                right: 22%;
-            }
+                    &:hover {
+                        background-color: var(--primary);
+                        color: var(--accent-color);
+                        transform: scale(1.05);
+                        border: 2px solid var(--accent-color);
+                    }
 
-            section {
-                display: flex;
-                align-items: center;
-                margin-bottom: 10px;
+                    @media screen and (max-width: 480px) {
+                        border-radius: 10px;
+                    }
 
-                a {
-                    button {
-                        i {
-                            @media screen and (max-width: 480px) {
-                                padding: 0.2rem;
-                                font-size: 15px;
-                                margin-right: 0;
-
-                            }
-                        }
-
-                        @media screen and (max-width: 769px) {
-                            padding: 0.8rem;
-                            font-size: 17px;
-                        }
+                    i {
+                        margin-right: 5px;
 
                         @media screen and (max-width: 480px) {
                             padding: 0.2rem;
-                            font-size: 12px;
+                            font-size: 15px;
+                            margin-right: 0;
+
                         }
+                    }
+
+                    @media screen and (max-width: 769px) {
+                        padding: 0.8rem;
+                        font-size: 17px;
+                    }
+
+                    @media screen and (max-width: 480px) {
+                        padding: 0.2rem;
+                        font-size: 12px;
                     }
                 }
             }
 
+
         }
     }
-
-
 }
