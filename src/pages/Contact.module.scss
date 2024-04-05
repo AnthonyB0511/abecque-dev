@@ -3,6 +3,28 @@
     flex-direction: column;
     width: 50%;
 
+    @media screen and (max-width: 1080px) {
+        width: 66%;
+    }
+
+    ;
+
+    @media screen and (max-width: 769px) {
+        width: 75%;
+    }
+
+    @media screen and (max-width: 600px) {
+        width: 80%;
+    }
+
+    @media screen and (max-width: 480px) {
+        width: 85%;
+    }
+
+    @media screen and (max-width: 380px) {
+        width: 95%;
+    }
+
     input,
     textarea {
         width: 75%;

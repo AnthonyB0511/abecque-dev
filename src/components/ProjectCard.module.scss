@@ -3,7 +3,7 @@
     padding: 15px;
     border-radius: 20px;
     margin-block: 2vh;
-    width: clamp(35%, 45%, 75%);
+    width: clamp(35%, 45%, 90%);
     height: clamp(25vh, 42vh, 50vh);
     // position: relative;
     transform-style: preserve-3d;
@@ -39,6 +39,7 @@
         img {
             width: 100%;
             border-radius: 15px;
+            height: 55%;
         }
 
         video {
@@ -46,6 +47,10 @@
             display: block;
             margin: 0 auto;
             border-radius: 15px;
+
+            @media screen and (max-width: 769px) {
+                width: 70%;
+            }
         }
     }
 
@@ -73,6 +78,7 @@
             font-size: 22px;
             width: 80%;
             margin: 15px auto;
+            text-align: justify;
 
             @media screen and (max-width: 768px) {
                 font-size: 16px;
