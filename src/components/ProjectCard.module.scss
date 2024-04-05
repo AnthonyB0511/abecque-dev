@@ -15,7 +15,7 @@
     justify-content: center;
 
     @media screen and (max-width: 769px) {
-        width: 70%;
+        width: 80%;
     }
 
     @media screen and (max-width: 480px) {
@@ -39,7 +39,11 @@
         img {
             width: 100%;
             border-radius: 15px;
-            height: 55%;
+            // height: clamp(35%, 50%, 70%);
+
+            // @media screen and (max-width: 480px) {
+            //     height: 100vh;
+            // }
         }
 
         video {
@@ -49,7 +53,7 @@
             border-radius: 15px;
 
             @media screen and (max-width: 769px) {
-                width: 70%;
+                width: 55%;
             }
         }
     }

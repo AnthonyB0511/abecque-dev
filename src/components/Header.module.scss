@@ -5,12 +5,17 @@
     justify-content: space-evenly;
     padding-block: 30px;
     min-height: 5vh;
+    max-height: 15vh;
     box-shadow: var(--box-shadow);
 
     .headerName {
         img {
             cursor: pointer;
             width: 66%;
+
+            @media screen and (max-width: 480px) {
+                width: 50%;
+            }
         }
     }
 
