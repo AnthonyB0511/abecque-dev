@@ -50,7 +50,7 @@ const Contact = () => {
             const response = await fetch('https://abecque-dev-api.vercel.app/api/contact/send', {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
-                body: JSON.strigify(values)
+                body: JSON.stringify(values)
             });
             if (response.ok) {
                 setFeedbackGood("Votre message a bien été envoyé");
@@ -92,7 +92,7 @@ const Contact = () => {
                 {errors?.rules && <p className="form-error text-center">{errors.rules.message}</p>}
 
                 <button className="mt20" title="Soumettre le formulaire">Envoyer votre message</button>
-                {feedback && <p className='form-error'>{feedback}</p>}
+                {feedback && <p className={`form-error mt20`}>{feedback}</p>}
                 {feedbackGood && <p className="feedbackGood">{feedbackGood}</p>}
             </form >
         </>
