@@ -48,7 +48,7 @@ const Contact = () => {
     const submit = async (values) => {
         try {
             console.log(values);
-            const response = await fetch('https://abecque-dev-api.vercel.app/send', {
+            const response = await fetch('https://abecque-dev-api.vercel.app/api/contact/sendMessage', {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(values)
@@ -61,7 +61,6 @@ const Contact = () => {
                     navigate("/");
                 }, 3000);
             }
-
         } catch (error) {
             setFeedback("Une erreur est survenue");
             console.error(error);
