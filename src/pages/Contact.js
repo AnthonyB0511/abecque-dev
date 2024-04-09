@@ -47,13 +47,22 @@ const Contact = () => {
 
     const submit = async (values) => {
         try {
-            const response = await fetch('http://localhost/8000/api/contact/send', {
+            const response = await fetch('https://abecque-dev-api.vercel.app/api/contact/send', {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.strigify(values)
             });
+            if (response.ok) {
+                setFeedbackGood("Votre message a bien été envoyé");
+                reset(defaultValues);
+                setTimeout(() => {
+                    setFeedbackGood("");
+                    navigate("/");
+                }, 3000);
+            }
 
         } catch (error) {
+            setFeedback("Une erreur est survenue");
             console.error(error);
         }
     };
@@ -82,7 +91,7 @@ const Contact = () => {
                 </section>
                 {errors?.rules && <p className="form-error text-center">{errors.rules.message}</p>}
 
-                <button className="btn mt20" title="Soumettre le formulaire">Envoyer votre message</button>
+                <button className="mt20" title="Soumettre le formulaire">Envoyer votre message</button>
                 {feedback && <p className='form-error'>{feedback}</p>}
                 {feedbackGood && <p className="feedbackGood">{feedbackGood}</p>}
             </form >
