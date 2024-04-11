@@ -1,6 +1,7 @@
 import Title from "../components/Title";
 import styles from "./About.module.scss";
 import cv from "../assets/doc/Cv_Abecque.pdf";
+import { Helmet } from "react-helmet";
 
 const About = () => {
     const handleDownload = () => {
@@ -16,6 +17,10 @@ const About = () => {
     };
     return (
         <>
+            <Helmet>
+                <title>A propos | ABecque</title>
+                <meta name="description" content="A Propos ABecque" />
+            </Helmet>
             <Title title="A Propos" />
             <section className={styles.sectionAbout}>
                 <p>Après 10 ans de travail dans les ressources humaines et la formation, j'ai choisi de me reconvertir en tant que développeur web et web mobile.

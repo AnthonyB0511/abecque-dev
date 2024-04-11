@@ -5,6 +5,7 @@ import * as yup from 'yup';
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useNavigate } from "react-router-dom";
 import styles from "./Contact.module.scss";
+import { Helmet } from "react-helmet";
 
 const Contact = () => {
     const [feedback, setFeedback] = useState("");
@@ -59,7 +60,7 @@ const Contact = () => {
                 setTimeout(() => {
                     setFeedbackGood("");
                     navigate("/");
-                }, 3000);
+                }, 5000);
             }
         } catch (error) {
             setFeedback("Une erreur est survenue");
@@ -68,6 +69,10 @@ const Contact = () => {
     };
     return (
         <>
+            <Helmet>
+                <title>Contact | ABecque</title>
+                <meta name="description" content="Contact site ABecque" />
+            </Helmet>
             <Title title="Contact" />
             <form onSubmit={handleSubmit(submit)} className={styles.contact}>
                 <input type="text" id="name" {...register("name")} title="Nom" placeHolder="Nom" />

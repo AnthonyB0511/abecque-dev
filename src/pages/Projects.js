@@ -3,10 +3,15 @@ import ProjectCard from "../components/ProjectCard";
 import styles from "./Projects.module.scss";
 import gommes from "../assets/img/gommes_1.webp";
 import atwi from "../assets/video/atwi.mp4";
+import { Helmet } from "react-helmet";
 
 const Projects = () => {
     return (
         <>
+            <Helmet>
+                <title>Projets | ABecque</title>
+                <meta name="description" content="Projets de ABecque" />
+            </Helmet>
             <Title title="Mes projets" />
             <section className={styles.projects}>
                 <ProjectCard

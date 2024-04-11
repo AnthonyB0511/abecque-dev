@@ -3,6 +3,7 @@ import Animation from "../assets/Animation.json";
 import Title from "../components/Title";
 import Card from "../components/Card";
 import styles from './Presentation.module.scss';
+import { Helmet } from "react-helmet";
 
 const Presentation = () => {
     const defaultOptions = {
@@ -15,16 +16,22 @@ const Presentation = () => {
     };
 
     return (
-        <section className={`${styles.container}d-flex align-items-center justify-content-evenly my30`}>
+        <>
+            <Helmet>
+                <title>Accueil | ABecque</title>
+                <meta name="description" content="Accueil du site ABecque" />
+            </Helmet>
+            <section className={`${styles.container}d-flex align-items-center justify-content-evenly my30`}>
 
-            <article>
-                <Title title="Bienvenue" />
-                <Card />
-            </article>
-            {/* <article className={styles.article}>
+                <article>
+                    <Title title="Bienvenue" />
+                    <Card />
+                </article>
+                {/* <article className={styles.article}>
                 <Lottie options={defaultOptions} height={600} width={400} />
             </article> */}
-        </section>
+            </section>
+        </>
 
     );
 };
