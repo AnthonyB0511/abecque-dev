@@ -1,0 +1,23 @@
+.loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .spinner {
+        font-size: 40px;
+        color: var(--accent-color);
+        animation: rotate 2s infinite
+    }
+}
+
+
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg)
+    }
+}
