@@ -19,7 +19,7 @@ const Projects = () => {
                     title="Les dés Gommés"
                     git="https://github.com/AnthonyB0511/les-des-gommes"
                     link="https://les-des-gommes.fr/"
-                    description="Réalisation pour une association avec espace d'échanges pour les utilisateurs et avec espace de administrateur"
+                    description="Réalisation pour une association avec espace d'échanges pour les utilisateurs et avec espace administrateur"
                     stack={["React", "Sass", "NodeJs", "Express", "Cloudinary", "Multer", "MySql"]} />
                 <ProjectCard
                     title="And the winner is ..."
