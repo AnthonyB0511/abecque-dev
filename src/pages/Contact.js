@@ -48,7 +48,7 @@ const Contact = () => {
     const submit = async (values) => {
         try {
             console.log(values);
-            const response = await fetch('https://abecque-dev-api.vercel.app/api/contact/sendMessage', {
+            const response = await fetch('https://abecque-dev-api.vercel.app/api/contact/send', {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(values)
