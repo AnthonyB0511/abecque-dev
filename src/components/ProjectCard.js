@@ -29,7 +29,7 @@ const ProjectCard = ({ photo, video, title, stack, link, git, description }) => 
                         <source src={video} type="video/mp4" />
                     </video>
                 )}
-                <h2 className="mt20">{title}</h2>
+                <h2 className="mt20 mb10">{title}</h2>
             </motion.div>
             <motion.div
 
