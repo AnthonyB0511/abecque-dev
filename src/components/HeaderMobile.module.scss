@@ -1,7 +1,7 @@
 .menu {
-    position: fixed;
+    position: relative;
     top: clamp(5%, 6%, 7%);
-    right: 20%;
+    right: -28%;
     width: 40px;
     height: 30px;
     cursor: pointer;
@@ -12,6 +12,22 @@
 
     @media screen and (max-width: 768px) {
         display: block;
+    }
+
+    @media screen and (max-width: 570px) {
+        right: -20%;
+    }
+
+    @media screen and (max-width: 480px) {
+        right: -15vw;
+    }
+
+    @media screen and (max-width: 380px) {
+        right: -12vw;
+    }
+
+    @media screen and (max-width: 320px) {
+        right: -8vw;
     }
 
     .bar {
