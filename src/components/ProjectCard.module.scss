@@ -1,10 +1,10 @@
 .container {
     cursor: pointer;
-    padding: 15px;
+    padding: 20px;
     border-radius: 20px;
     margin-block: 2vh;
     width: clamp(35%, 45%, 90%);
-    height: clamp(25vh, 42vh, 50vh);
+    height: clamp(25vh, 40vh, 50vh);
     // position: relative;
     transform-style: preserve-3d;
     // overflow: hidden; // Assure que les éléments retournés ne débordent pas
@@ -56,13 +56,23 @@
             margin: 0 auto;
             border-radius: 15px;
 
+            @media screen and (max-width: 1200px) {
+                width: 50%;
+
+            }
+
+            @media screen and (max-width: 965px) {
+                width: 60%;
+
+            }
+
             @media screen and (max-width: 769px) {
-                width: 40%;
+                width: 38%;
 
             }
 
             @media screen and (max-width: 480px) {
-                width: 50%;
+                width: 45%;
             }
 
             @media screen and (max-width: 380px) {
