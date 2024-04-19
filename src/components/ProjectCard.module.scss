@@ -4,7 +4,7 @@
     border-radius: 20px;
     margin-block: 2vh;
     width: clamp(35%, 45%, 90%);
-    height: clamp(25vh, 44vh, 50vh);
+    height: 44vh;
     // position: relative;
     transform-style: preserve-3d;
     // overflow: hidden; // Assure que les éléments retournés ne débordent pas
@@ -14,16 +14,32 @@
     align-items: center;
     justify-content: center;
 
+    @media screen and (max-width: 1280px) {
+        height: 40vh;
+    }
+
+
     @media screen and (max-width: 769px) {
         width: 80%;
+        height: 41vh;
     }
 
     @media screen and (max-width: 600px) {
         width: 95%;
+        height: 38vh;
     }
 
     @media screen and (max-width: 480px) {
         width: 100%;
+        height: 39vh;
+    }
+
+    @media screen and (max-width: 420px) {
+        height: 35vh;
+    }
+
+    @media screen and (max-width: 320px) {
+        height: 32vh;
     }
 
 
@@ -76,7 +92,7 @@
             }
 
             @media screen and (max-width: 380px) {
-                width: 65%;
+                width: 49%;
             }
         }
     }
