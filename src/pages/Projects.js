@@ -3,6 +3,7 @@ import ProjectCard from "../components/ProjectCard";
 import styles from "./Projects.module.scss";
 import gommes from "../assets/img/gommes_1.webp";
 import atwi from "../assets/video/atwi.mp4";
+import wildlands from "../assets/img/Wildlands.webp";
 import { Helmet } from "react-helmet";
 
 const Projects = () => {
@@ -28,6 +29,13 @@ const Projects = () => {
                     stack={["ReactNative", "Expo"]}
                     video={atwi}
                 />
+                <ProjectCard
+                    title="Wildlands"
+                    git="https://github.com/AnthonyB0511/Wildlands-TS"
+                    description="Wildlands -refonte d'un projet réalisé en groupe avec React, Typescript et Vite"
+                    stack={["React, Typescript, Vite"]}
+                    link="https://wildlands-ts.vercel.app/"
+                    photo={wildlands} />
             </section>
 
         </>

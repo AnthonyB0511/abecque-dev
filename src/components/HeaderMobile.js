@@ -6,7 +6,6 @@ const HeaderMobile = () => {
     const [menuOpen, setMenuOpen] = useState(false);
     const toggleMenu = () => {
         setMenuOpen(!menuOpen);
-        console.log(menuOpen);
     };
     return (
         <>
